@@ -7,7 +7,7 @@ describe('#average', () => {
         avg.should.equal(2.5)
         done()
     })
-    // 測試有沒有回傳 NaN
+    //  測試有沒有回傳 NaN
     it('should return NaN when array is empty', done => {
         var avg = math.average([])
         isNaN(avg).should.be.true
