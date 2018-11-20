@@ -30,7 +30,7 @@ describe('hooks', function () {
     it('#1', done => {
         console.log('...this....');
         //assert(1 === 2, '1不等於2');
-        assert.equal('a', 'b');
+        assert.equal('a', 'a');
         done();
     })
 
