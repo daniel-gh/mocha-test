@@ -2,36 +2,42 @@ var assert = require('assert');
 
 describe('hooks', function () {
 
-    before(function (done) {
+    before(function () {
         // runs before all tests in this block
         console.log('this is before');
-        done();
+        assert.equal('a', 'b');
+        //done();
     });
 
-    after(function (done) {
+    after(function () {
         // runs after all tests in this block
         console.log('this is after');
-        done();
+        //done();
     });
 
-    beforeEach(function (done) {
+    beforeEach(function () {
         // runs before each test in this block
         console.log('this is beforeEach');
-        done();
+        //done();
     });
 
-    afterEach(function (done) {
+    afterEach(function () {
         // runs after each test in this block
         console.log('this is afterEach');
-        done();
+        //done();
     });
 
 
-    it('#1', done => {
+    it('#1', () => {
         console.log('...this....');
         //assert(1 === 2, '1不等於2');
         assert.equal('a', 'a');
-        done();
+        //done();
+    })
+
+    it("#timeout", () => {
+        this.timeout(1000);
+        assert.ok(true);
     })
 
 });
