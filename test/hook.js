@@ -5,7 +5,7 @@ describe('hooks', function () {
     before(function () {
         // runs before all tests in this block
         console.log('this is before');
-        assert.equal('a', 'b');
+
         //done();
     });
 
